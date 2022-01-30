@@ -121,6 +121,11 @@ Carry out shooting Jason with something:
 	say "You shoot Jason and he falls over.";
 	now Jason is dead;
 	rule succeeds.
+	
+Carry out shooting something worn by Jason with something:
+	say "You put a couple holes in [the noun] to little avail. Also I guess Jason died somehow.";
+	now Jason is dead;
+	rule succeeds.
 
 Carry out shooting the door with something:
 	if door damage is less than Critical door damage:
@@ -241,7 +246,7 @@ An apple is on the desk. The apple is edible.
 
 The gravity control lever is a fixed in place device in the gravity control room. "A lever on the southern wall is labelled 'gravity control'."
 It is switched on.
-
+Understand "use [a device]" or "pull [a device]" or "push [a device]" as a mistake ("This is too vague. Try SWITCH GRAVITY OFF instead."). 
 
 Volume 3 - Release
 
