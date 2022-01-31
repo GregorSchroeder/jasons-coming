@@ -188,7 +188,7 @@ Instead of taking the broken bottle, say "You cut your finger on the glass and t
 Chapter 8 - Gifts
 
 Instead of giving something to Jason:
-	say "You offer [the noun] to Jason and he hesitates. He gingerly takes it out of your hand and then awkwardly hands you his machete. [If gravity is yes]It is very heavy and you almost drop it. [end if]Jason silently nods at you and turns to leave. Before [if gravity is yes]walking [otherwise]floating [end if]out the door he turns and flashes the peace sign. Then he is gone.";
+	say "You offer [the noun] to Jason and he hesitates. He gingerly takes it out of your hand and then[if the noun is the written note], after looking at it for several seconds,[end if] awkwardly hands you his machete. [If gravity is yes]It is very heavy and you almost drop it. [end if]Jason silently nods at you and turns to leave. Before [if gravity is yes]walking [otherwise]floating [end if]out the door he turns and flashes the peace sign. Then he is gone.";
 	end the story saying "Nice knife you got there"
 
 
