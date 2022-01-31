@@ -37,6 +37,7 @@ A progress rule (this is the door breakage rule):
 		now Jason is in the gravity control room;
 		now the wooden door is unlocked;
 		now the wooden door is open;
+		now the description of the wooden door is "It's utterly demolished and a hindrance to absolutely nobody.";
 	else if door damage is less than critical door damage:
 		say "You can hear Jason beating down the door.";
 	now door damage is door damage plus 1.
@@ -167,6 +168,10 @@ Before going east:
 		say "You try to float your way to the door, but all the glass shrapnel in the air proves to be your undoing.";
 		end the story saying "Seriously. That's why we have the case."
 
+After going east:
+	say "You [if gravity is yes]walk[otherwise]float[end if] through the now open door to the hallway beyond.[if gravity is no]Passing the threshold you fall to the ground and quickly scramble to your feet.[end if]";
+	continue the action.
+
 Chapter 7 - Handling hazardous materials
 
 After dropping the glass bottle:
@@ -222,11 +227,11 @@ Book 2 - The World
 
 Chapter 1 - Gravity Control
 
-The gravity control room is a room. "You have locked yourself inside the gravity control room because Jason is coming to murder you. He's breaking down the door right now. Quick! Think of something!"
+The gravity control room is a room. "You have locked yourself inside the gravity control room because Jason is coming to murder you. He's breaking down the door right now. Quick! Think of something![line break][if the wooden door is locked]The door to the east is locked. There's nothing but Jason through there.[otherwise]Little is left of the door. Could probably just walk on through.[end if]"
 
 The player is in the gravity control room.
 
-The wooden door is a door. "[if locked]The door to the east is locked. There's nothing but Jason through there.[otherwise]Little is left of the door. Could probably just walk on through."
+The wooden door is a door. It is scenery.
 The wooden door is east of the gravity control room and west of the hallway. It is lockable and locked.
 
 The security case is a lockable, locked container in the gravity control room. "Affixed to the west wall is a sturdy security case with a lock on it."
@@ -247,6 +252,13 @@ An apple is on the desk. The apple is edible.
 The gravity control lever is a fixed in place device in the gravity control room. "A lever on the southern wall is labelled 'gravity control'."
 It is switched on.
 Understand "use [a device]" or "pull [a device]" or "push [a device]" as a mistake ("This is too vague. Try SWITCH GRAVITY OFF instead."). 
+
+Chapter 2 - Hallway
+
+The hallway is a room. "You are in the hallway to the gravity control room. Frank's office is to the east, while the hallway leads south towards freedom."
+
+Bits of wood are in the hallway. "Bits of a wooden door are strewn about the place."
+They are fixed in place.
 
 Volume 3 - Release
 
